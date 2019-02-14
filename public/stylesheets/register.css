@@ -1,0 +1,12 @@
+.welcome-text {
+    margin-left: 40px;
+}
+.name-text {
+    margin-left: 345px;
+}
+
+@media screen and (max-width: 650px) {
+    .name-text {
+        margin-left: 0px;
+    }
+}

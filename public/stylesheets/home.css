@@ -1,0 +1,21 @@
+/*********** CARD IMG *************/
+.card-image {
+    margin: 20px;
+  }
+  
+  .card-title {
+    font-size: 3rem;
+    margin: 0px 20px 0px 20px;
+  }
+  .card-text {
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-left: 12px;
+  }
+  .btn-card {
+    margin: 20px;
+    margin-left: 470px;
+  }
+  .text-update {
+    margin-top: 70px;
+  }

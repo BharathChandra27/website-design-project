@@ -1,0 +1,47 @@
+{{!-- LogIn Page --}}
+
+{{# if errors }}
+    <ul>
+        {{# each errors }}
+            <li>{{ this.msg }} <i class="far fa-frown"></i></li>
+        {{/each}}
+    </ul>
+{{/if}}
+
+<div class="container login-container">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <form action="/login/success" method="POST">
+                <h3>Login Here</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="userName" placeholder="Your Username *">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="userEmail" placeholder="Your Email *">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="userPass" placeholder="Your Password *">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label text-warning">Remember Me</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" href="/login/success" class="btnSubmit" value="Login">
+                </div>
+                <div class="form-group">
+                    <a href="#" class="btnForgetPwd">Forget Password?</a>
+                </div>        
+        </div>
+        <div class="col-md-6 login-form-2">
+            <div class="login-logo">
+                <img src="https://image.ibb.co/n7oTvU/logo_white.png">
+            </div>
+            <h3>First time Here</h3>
+            <button class="btn btn-danger btn-lg btn-block"><a href="/register" class="text-warning btn-create-account">Create new Account / Signin</a></button>
+            <br>
+            <button class="btn btn-warning btn-lg btn-block btn-needhelp"><a href="/login/needhelp" class="text-danger btn-needhelp">Need Help?</a></button>
+        </div>
+    </div>
+    </form>
+</div>

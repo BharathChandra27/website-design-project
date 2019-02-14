@@ -1,0 +1,66 @@
+{{!-- Dashboard page --}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LogIn | Success | Dashboard</title>
+
+    {{!-- Setting Style Properties --}}
+    <style>
+        html {
+            background-color: cornflowerblue;
+        }
+        .my-container {
+            margin: 100px;
+            padding: auto;
+            overflow: hidden;
+        }
+        button.btn {
+            background-color: brown;
+            border-radius: 1rem;
+            padding: 20px;
+            margin: 0px 0px 0px 900px;
+        }
+        button.btn a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 2rem;
+            font-family: monospace;
+            
+        }
+        button.btn:hover {
+            background-color: burlywood;
+        }
+        h1 {
+            color: #eee;
+            font-size: 3rem;
+            font-family: cursive;
+        }
+        h3 {
+            color: black;
+            font-family: monospace;
+            font-size: 2.3rem;
+        }
+        /*** Mobile Compatability ****/
+
+        @media screen and (max-width: 650px) {
+            button.btn {
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="my-container">
+        <button class="btn"><a href="/logout"> Logout</a></button>
+        <h1> Hello there!!!</h1>
+        <h3>This is the dashboard page. If you are seeing this means you are 
+            successfully logged in and thanks for Logging In.</h3>
+        <h3>This site is stil under construction.... So thanks for visiting this page and shortly I'll update
+            the capabilities of this page. Thanks once again and please provide feedback in profile page..
+        </h3>
+</div>
+</body>
+</html>

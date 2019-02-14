@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    {{!-- Setting Style Properties --}}
+    <style>
+        section {
+            display: block;
+            overflow: hidden;
+            margin: 130px  0px 0px 280px;
+            color: #ffffff;
+            background-color: darkorchid;
+            padding: 20px;
+            font-family: cursive;
+            font-size: 1.5rem;
+            width: 750px;
+            -webkit-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.7);
+            -moz-box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.7);
+            box-shadow: 2px 2px 3px 3px rgba(0,0,0,0.7);
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+        section p a {
+            text-decoration: none;
+            color: burlywood;
+        }
+        /*** Mobile Compatability ****/
+
+        @media screen and (max-width: 650px) {
+            section {
+                width: 380px;
+                height: 300px;
+                margin: 30px 0 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    {{!-- Logout page --}}
+    <section>
+        <p>You are successfully Logged out. We recomend you to close the browser for Better experience.
+            <a href="/"> Click here </a> to go to Home page and thanks for logging In.
+        </p>
+    </section>
+</body>
+</html>

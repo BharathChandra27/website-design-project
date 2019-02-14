@@ -1,0 +1,50 @@
+.jumbotron {
+    background-color: #C0C0C0;
+}
+.my-section {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    width: 600px;
+    margin-left: 70px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -o-border-radius: 7px; 
+}
+.my-section p {
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    line-height: 2;
+    font-size: 1.2rem;
+
+}
+img.my-img {
+    height: 200px;
+    width: 200px;
+    margin-left: 20px;
+}
+.my-form {
+    overflow: hidden;
+    margin-left: 50px;
+}
+
+ /* Mobile viewport Styles */
+@media screen and (max-width: 650px) {
+    .my-section {
+        display: block;
+        padding: 0px;
+        height: 350px;
+        width: 390px;
+        margin: 3px;
+    }
+    .info-card {
+        margin-top: 10px;
+        margin-left: 50px; 
+    }
+    .my-form {
+        margin-left: 7px;
+    }
+}

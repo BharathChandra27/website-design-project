@@ -1,0 +1,97 @@
+{{!-- Register Page --}}
+
+{{!-- Condiction to check for errors --}}
+{{# if success }}
+        <h2 class="text-success">Your have been successfully registered. Thanks for your registration and
+            check the mail sent to you for further details. <i class="far fa-smile"></i></h2>
+{{ else }}
+    {{# if errors }}
+            <ul>
+                {{# each errors }}
+                    <li>{{ this.msg }} <i class="far fa-frown"></i></li>
+                {{/each}}
+            </ul>
+    {{/if}}
+
+{{!-- Section-1 --}}
+<h1 class="text-primary welcome-text">Hi there!! Fill the below form to complete your registration</h1>
+<br>
+<h4 class="text-secondary name-text">Enter your name</h4>
+<div class="row">
+    <div class="col-md-3 col-sm-12"></div>
+    <div class="col-sm-12m col-md-6">
+        {{!-- FORM STARTS --}}
+        <form action="/register/success" method="POST">
+            {{!-- NAME FIELDS --}}
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="userFirstName" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="userLastName" placeholder="Last name">
+                </div>
+            </div>
+            <br>
+            {{!-- ADDRESS FIELD --}}
+            <div class="form-group">
+                <h4 class="text-secondary">Email address</h4>
+                <input type="email" class="form-control" name="userEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <small class="form-text text-muted">Don't worry I'll never share your email with anyone else.</small>
+            </div>
+            {{!-- PASSWORD FIELD --}}
+            <div class="form-group">
+                <h4 class="text-secondary">Password</h4>
+                <input type="password" class="form-control" name="userFirstPass" placeholder="First Password">
+                <small class="form-text text-muted">Your password must have one alphabet, one numeric and one special charecter.</small>
+            </div>
+            <div class="form-group">
+                <h4 class="text-secondary"> Re-enter Password</h4>
+                <input type="password" class="form-control" name="userSecondPass" placeholder="Confirm Password">
+                <small class="form-text text-muted">Both entered passwords must match.</small>
+            </div>
+            {{!-- PIC SECTION --}}
+            <h4 class="text-secondary"> Choose your Photo</h4>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" name="userPic" id="customFile">
+                <label class="custom-file-label" for="customFile">Choose file</label>
+                <small class="form-text text-muted">Picture size must be less than 100kb.</small>
+                <br>
+            </div>
+            {{!-- ADDRESS FIELD --}}
+            <div class="form-group">
+                <h4 class="text-secondary">Temporary Address</h4>
+                <input type="text" class="form-control" name="userTempAdd" placeholder="your temporary address">
+            </div>
+            <div class="form-group">
+                <h4 class="text-secondary">Permenent Address</h4>
+                <input type="text" class="form-control" name="userPerAdd" placeholder="your permenent address">
+                <small class="form-text text-muted">Don't worry I'll never share your address with anyone else.</small>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <h5 class="text-secondary">City</h5>
+                    <input type="text" name="userCity" class="form-control">
+                </div>
+                <div class="form-group col-md-4">
+                    <h5 class="text-secondary">State</h5>
+                    <input type="text" name="userState" class="form-control">
+                </div>
+                <div class="form-group col-md-2">
+                    <h5 class="text-secondary">Zip</h5>
+                    <input type="text" name="userZip" class="form-control">
+                </div>
+            </div>
+            {{!-- CHECK BOX FOR TERMS AND CONDICTIONS --}}
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">By this you are agreed to all my terms and condictions</label>
+                <small class="form-text text-muted">Please make sure that you toggled this before Registration.</small>
+            </div>
+            <br>
+            {{!-- REGISTRATION BUTTON --}}
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+{{/if}}
