@@ -1,9 +1,9 @@
 # website-design-project
-Reloaded version of previous project
+#Reloaded version of previous project
 
 Use the below command to install all the dependencies
 
-  npm install --save
+  *npm install --save*
 
 use below command to run the application
 
