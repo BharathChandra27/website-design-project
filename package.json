@@ -1,7 +1,7 @@
 {
-  "name": "project",
+  "name": "website-design-project",
   "version": "1.0.0",
-  "description": "Project One",
+  "description": "website-design-project",
   "main": "app.js",
   "dependencies": {
     "body-parser": "~1.13.2",
