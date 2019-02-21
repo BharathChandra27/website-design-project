@@ -9,7 +9,9 @@ var hbs = require('express-handlebars')
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 var routes = require('./routes/index')
-
+var passport = require('passport')
+// Passport Config
+require('./config/passport')
 // Creating express app
 var app = express()
 const portNo = 8000
@@ -44,17 +46,14 @@ app.use(expressSession({
         saveUninitialized: false, 
         resave: false
 }))
-app.use(expressSession({
-        cookie: { path: '/login', secure: false},
-        name: 'login-session',
-        secret: 'shhhh',
-        saveUninitialized: false,
-        resave: false
-}))
+
+// passport setup
+app.use(passport.initialize())
+app.use(passport.session())
+
 // Setting router and static public paths
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', routes)
-
 
 // Setting server to listen on port
 app.listen(portNo, (req, res) => {
